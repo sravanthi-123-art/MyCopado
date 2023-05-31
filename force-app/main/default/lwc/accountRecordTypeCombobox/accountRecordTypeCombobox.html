@@ -1,0 +1,22 @@
+<template>
+    <lightning-card>
+        <div if:true={objectInfo.data}>
+            <lightning-combobox name="recordType" 
+            label="Record Type" 
+            placeholder="Select Record Type"
+            value={value} 
+            options={recordTypeId}
+            onchange={changeHandler}>
+            </lightning-combobox>
+    <lightning-record-form object-api-name={objectApiName}
+        record-id={recordId}
+        layout-type="Full"
+        mode="edit"
+        fields={fields}
+         onsuccess={handleSuccess}>
+         
+            
+    </lightning-record-form>
+    </div>
+</lightning-card>
+</template>
